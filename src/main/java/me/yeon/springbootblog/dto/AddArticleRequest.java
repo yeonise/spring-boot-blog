@@ -13,10 +13,11 @@ public class AddArticleRequest { // DTO : 계층끼리 데이터를 교환하기
     private String title;
     private String content;
 
-    public Article toEntity() {
+    public Article toEntity(String author) {
         return Article.builder()
                 .title(title)
                 .content(content)
+                .author(author)
                 .build();
     }
 }
